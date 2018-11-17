@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 /**
  * This class extends JFrame and contains the main entry point for the program.
  * 
- * @author CS2334. Modified by: Stephen
+ * @author CS2334. Modified by: Stephen, Peyton
  * @version 2018-04-02
  * Lab 11
  */
@@ -46,7 +46,7 @@ public class DrawFrame extends JFrame
         
         // Collar:
         
-        // Square around the dog:
+        // Square around the it:
 
         // initialize the panel and add the shapes to it
         drawPanel = new DrawPanel();
@@ -74,7 +74,7 @@ public class DrawFrame extends JFrame
      */
     public static void main(String[] args)
     {
-        DrawFrame frame = new DrawFrame("Woof :3");
+        DrawFrame frame = new DrawFrame("Things noise");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

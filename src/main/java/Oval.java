@@ -5,7 +5,7 @@ import java.awt.Point;
 /**
  * This class maintains information for drawing an Oval, and extends Shape.
  * 
- * @author Stephen
+ * @author Peyton
  * @version 2018-04-02
  * Lab 11
  */
@@ -34,6 +34,9 @@ public class Oval extends Shape
         super(color, filled);
 
         // TODO: complete implementation.
+        location[0] = new Point(pointCenter.x, pointCenter.y);
+        this.diameter1 = diameter1;
+        this.diameter2 = diameter2;
     }
 
     /**
@@ -63,7 +66,7 @@ public class Oval extends Shape
      * 
      * Remember that graphics generally draws shapes starting with the top-left corner. For an oval, this is
      * determined by the bounding box. You can visualize the bounding box of an oval as a rectangle which
-     * inscribes the oval. You will need to do a small amuont of math to determine the top-left corner of the
+     * inscribes the oval. You will need to do a small amount of math to determine the top-left corner of the
      * bounding box given the center point that you should have stored.
      * 
      * @param graphics A Graphics object for drawing the shape
@@ -73,6 +76,11 @@ public class Oval extends Shape
     {
         graphics.setColor(this.getColor());
         
-        // TODO: define how to draw an oval. Remember that the point stored is the center point.
+        if(isFilled())
+        {
+            graphics.fillOval(location[0].x-(diameter1/2), location[0].y-(diameter2/2), diameter1, diameter2);
+        }
+        else
+        graphics.drawOval(location[0].x-(diameter1/2), location[0].y-(diameter2/2), diameter1, diameter2);
     }
 }
