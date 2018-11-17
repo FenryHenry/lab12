@@ -76,11 +76,13 @@ public class Oval extends Shape
     {
         graphics.setColor(this.getColor());
         
-        if(isFilled())
+        if(this.isFilled())
         {
             graphics.fillOval(location[0].x-(diameter1/2), location[0].y-(diameter2/2), diameter1, diameter2);
         }
         else
+        {
         graphics.drawOval(location[0].x-(diameter1/2), location[0].y-(diameter2/2), diameter1, diameter2);
+        }
     }
 }
