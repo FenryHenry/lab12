@@ -26,11 +26,10 @@ public class Rectangle extends Polygon
         
         location = new Point[4];
         
-        location[0] = new Point(center.x - (width/2), center.y + (height/2));
-        location[1] = new Point(center.x + (width/2), center.y + (height/2));
-        location[2] = new Point(center.x - (width/2), center.y - (height/2));
-        location[3] = new Point(center.x + (width/2), center.y - (height/2));
-
+        location[0] = new Point(center.x - (width/2), center.y - (height/2));
+        location[1] = new Point(center.x + (width/2), center.y - (height/2));
+        location[2] = new Point(center.x + (width/2), center.y + (height/2));
+        location[3] = new Point(center.x - (width/2), center.y + (height/2));
         
         
     }
