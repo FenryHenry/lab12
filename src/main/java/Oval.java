@@ -34,7 +34,9 @@ public class Oval extends Shape
         super(color, filled);
 
         // TODO: complete implementation.
+        location = new Point[1];
         location[0] = new Point(pointCenter.x, pointCenter.y);
+        
         this.diameter1 = diameter1;
         this.diameter2 = diameter2;
     }

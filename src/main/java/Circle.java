@@ -21,6 +21,7 @@ public class Circle extends Oval
     public Circle(Point pointCenter, int diameter, Color color, boolean filled)
     {
         super(pointCenter, diameter, diameter, color, filled);
+        
     }
 
     /**

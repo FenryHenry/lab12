@@ -1,6 +1,12 @@
 import java.awt.Color;
 import java.awt.Point;
-
+/**
+ * This class maintains information for the abstract shape object.
+ * 
+ * @author Peyton
+ * @version 2018-04-02
+ * Lab 11
+ */
 public abstract class Shape implements Drawable
 {
     protected Point[] location;

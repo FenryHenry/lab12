@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Point;
 
 import javax.swing.JFrame;
@@ -36,7 +37,7 @@ public class DrawFrame extends JFrame
         // TODO: draw a dog:
         
         // Base head:
-        Circle base = new Circle(new Point(400, 300), 400, Color.ORANGE, true);
+        Circle base = new Circle(new Point(400, 300), 300, Color.ORANGE, true);
         
         // Ears:
         
@@ -55,10 +56,10 @@ public class DrawFrame extends JFrame
         drawPanel.addShape(base);
         
         // set background color
-        drawPanel.setBackground(Color.YELLOW);
+        drawPanel.setBackground(Color.LIGHT_GRAY);
         
         // add panel to frame
-        this.add(drawPanel);
+        this.add(drawPanel); 
         
         // finish setting up the frame
         setSize(width, height);
@@ -74,7 +75,7 @@ public class DrawFrame extends JFrame
      */
     public static void main(String[] args)
     {
-        DrawFrame frame = new DrawFrame("Things noise");
+        DrawFrame frame = new DrawFrame("Jehtro");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

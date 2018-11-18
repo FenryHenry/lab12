@@ -1,10 +1,10 @@
-import java.awt.Color;
+import java.awt.Color; 
 import java.awt.Point;
 
 /**
  * Class that represents a line with a thickness as a polygon.
  * 
- * @author Stephen
+ * @author Peyton
  * @version 2018-04-02
  */
 public class PolyLine extends Polygon
@@ -29,6 +29,16 @@ public class PolyLine extends Polygon
      */
     public PolyLine(Point pointUL, Point pointUR, int thickness, Color color, boolean filled)
     {
-        // TODO: implement this.
+        super(color, filled);
+        
+        location = new Point[4];
+        
+        location[0] = pointUL;
+        location[1] = pointUR;
+        location[2] = new Point(pointUR.x, pointUR.y + thickness);
+        location[2] = new Point(pointUL.x, pointUL.y + thickness);
+
+        
+        
     }
 }
