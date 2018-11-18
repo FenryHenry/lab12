@@ -41,7 +41,7 @@ public abstract class Polygon extends Shape
         for (int i = 0; i < numOfPoints; i++)
         {
             xPoints[i] = location[i].x;
-            yPoints[i] = location[i].y;
+            yPoints[i] = location[i].y; 
         }
         
         // Set the color

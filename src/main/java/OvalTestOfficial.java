@@ -62,5 +62,34 @@ public class OvalTestOfficial
         Assert.assertEquals("Incorrect diameter2 for the Circle", 75, c2.getDiameter2());
     }
     
-    // TODO: test color and fill in constructor.
+    /**
+     * Verify the oval is appropriately filled or not
+     */
+    @Test
+    public void testOvalConstructorFilled()
+    {
+        Assert.assertTrue("Diamond fill incorrect.", o1.isFilled());
+        Assert.assertFalse("Diamond fill incorrect.", o2.isFilled());
+        
+        Assert.assertTrue("Diamond fill incorrect.", c1.isFilled());
+        Assert.assertFalse("Diamond fill incorrect.", c2.isFilled());
+    }
+    
+    /**
+     * Verify the oval has been alloted the appropriate color
+     */
+    @Test
+    public void testOvalConstructorColor()
+    {
+        Color clr1 = o1.getColor();
+        Color clr2 = o2.getColor();
+        Assert.assertEquals("Diamond color incorrect.", Color.BLACK, clr1);
+        Assert.assertEquals("Diamond color incorrect.", Color.CYAN, clr2);
+        
+        clr1 = c1.getColor();
+        clr2 = c2.getColor();
+        Assert.assertEquals("Diamond color incorrect.", Color.BLUE, clr1);
+        Assert.assertEquals("Diamond color incorrect.", Color.RED, clr2);
+        
+    }
 }
